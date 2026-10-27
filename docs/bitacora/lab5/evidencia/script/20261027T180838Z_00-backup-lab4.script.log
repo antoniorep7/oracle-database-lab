@@ -1,0 +1,2 @@
+== 1. Comprobaciones previas ==
+El contenedor debe estar en marcha: docker start oralab-26ai
