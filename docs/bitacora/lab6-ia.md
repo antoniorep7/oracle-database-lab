@@ -101,7 +101,8 @@ Te paso lo que he hecho yo en la terminal de ubuntu
 [pegué la salida de las comprobaciones: git diff --stat, wc -l, md5sum y autoria.py]
 
 Vale, pasamelo para copiar y pegar
-[después le pedí el comando de nano y que revisara mi texto y la entrada antes del commit]```
+[después le pedí el comando de nano y que revisara mi texto y la entrada antes del commit]
+```
 - **Código recibido (el fragmento, o la ruta del archivo donde está):**
 ```bash
 git switch main && git pull
