@@ -23,14 +23,16 @@ Puedes pasarme lo que necesito para responder las 20 preguntas?
 
 Y ahora?
 
+pasame tu la descripcion
+
 [durante el laboratorio le he ido pegando las salidas de los comandos para que las revisara]
 [en la Parte I le pasé mis postmortems para que me dijera qué fallaba; los corregí yo]
 [le pasé mis respuestas y el simulacro para que me dijera qué fallaba; los corregí yo]
 ```
 - **Código recibido (el fragmento, o la ruta del archivo donde está):** no aplica
-- **Dónde lo usé (parte, script o pregunta):** Todo el laboratorio, esta declaración, la revisión de docs/bitacora/lab6-guardia.md y la revisión de docs/bitacora/lab6-respuestas.md
+- **Dónde lo usé (parte, script o pregunta):** Todo el laboratorio, esta declaración, la revisión de docs/bitacora/lab6-guardia.md, la revisión de docs/bitacora/lab6-respuestas.md y la descripción del Pull Request
 - **Propósito (para qué lo necesitaba):** que me guiara en el laboratorio, me dijera si tenía fallos y me explicara cómo corregirlos
-- **Qué hace (con mis palabras; línea a línea si es SQL corto):** he ido pasándole los comandos que ejecutaba y sus salidas, y me decía si había algún fallo y cómo corregirlo. También me explicó qué poner en config/.env (las contraseñas de las dos cuentas nuevas y mi código de alumno), cómo guardar en nano, y me dio el texto de esta declaración, que he revisado. En la guardia me explicó cómo leer el diagnóstico y revisó mis postmortems, que escribí y corregí yo. Para las respuestas me indicó en qué evidencia estaba cada dato y revisó mis respuestas y el simulacro; las escribí y corregí yo.
+- **Qué hace (con mis palabras; línea a línea si es SQL corto):** he ido pasándole los comandos que ejecutaba y sus salidas, y me decía si había algún fallo y cómo corregirlo. También me explicó qué poner en config/.env (las contraseñas de las dos cuentas nuevas y mi código de alumno), cómo guardar en nano, y me dio el texto de esta declaración, que he revisado. En la guardia me explicó cómo leer el diagnóstico y revisó mis postmortems, que escribí y corregí yo. Para las respuestas me indicó en qué evidencia estaba cada dato y revisó mis respuestas y el simulacro; las escribí y corregí yo. También me dio el texto de la descripción del Pull Request, que revisé.
 - **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):** no aplica
 
 ## Entrada 2
@@ -69,17 +71,4 @@ printf "ALTER SESSION SET CONTAINER = FREEPDB1;\nALTER USER app_academia ACCOUNT
   - `docker start oralab-26ai`: arranca el contenedor de la base, que estaba parado después de reiniciar el ordenador.
   - `ls /mnt/c/Users/`: lista las carpetas de usuario de Windows vistas desde Ubuntu, para encontrar dónde estaba el kit.
   - `cp -r …/repo-kit/{scripts,config,docs} .`: copia las carpetas scripts, config y docs del kit a la raíz de mi repositorio, respetando las rutas.
-  - `grep '^ESTUDIANTE' config/.env`: muestra solo la línea de mi código de alumno, sin enseñar las contraseñas.
-  - `| cat -A`: muestra además los caracteres invisibles; el `$` marca el final de la línea.
-  - `grep -n`: añade el número de línea, para ver si la variable estaba repetida.
-  - `sed -i "s/E0NN/E040/"`: cambia E0NN por mi código E040 en el título de este archivo.
-  - `ALTER SYSTEM KILL SESSION '21,21995' IMMEDIATE`: termina la sesión 21 de matrículas que bloqueaba a Ana; Oracle deshace su UPDATE sin confirmar y libera la fila (INC-601). El ORA-00031 indica que queda marcada para terminar.
-  - `ALTER USER app_academia ACCOUNT UNLOCK` (dentro de FREEPDB1): desbloquea la cuenta de la aplicación que había bloqueado el script de bajas, sin cambiar su contraseña (INC-603).
-- **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):**
-  - docker start: cabecera de la evidencia 00 (…_00-backup-lab6-inicio.script.log), con arranque=2026-11-25T16:30:52, la hora en que arrancó el contenedor.
-  - cp: el commit de la Parte A, que añade los archivos del kit (scripts/lab6/, scripts/ops/, config/.env.example y docs/plantillas/).
-  - grep: login.sql (DEFINE ESTUDIANTE = E040) y alumno=E040 en la cabecera de mis evidencias.
-  - sed: el título de este archivo (Lab 6 · E040).
-  - KILL: el …_08-diagnostico.script.log de las 18:25:16Z (secciones 1 a 4 vacías; ASH registra la espera hasta las 18:25:01).
-  - UNLOCK: el …_08-validacion-inc603.script.log (la aplicación conecta) y el …_08-diagnostico.script.log de las 18:31:29Z (sección 7 vacía).
-  - El cp, los grep y el sed se ejecutan en Ubuntu, no en el contenedor; por eso su evidencia es su efecto en el repositorio.
+  - `grep '^ESTUDIANTE'
