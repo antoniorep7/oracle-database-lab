@@ -19,13 +19,18 @@ Dime tu lo que tengo que ponerte exactamente aqui
 
 Que te parece ahora?
 
+Puedes pasarme lo que necesito para responder las 20 preguntas?
+
+Y ahora?
+
 [durante el laboratorio le he ido pegando las salidas de los comandos para que las revisara]
 [en la Parte I le pasé mis postmortems para que me dijera qué fallaba; los corregí yo]
+[le pasé mis respuestas y el simulacro para que me dijera qué fallaba; los corregí yo]
 ```
 - **Código recibido (el fragmento, o la ruta del archivo donde está):** no aplica
-- **Dónde lo usé (parte, script o pregunta):** Todo el laboratorio, esta declaración y la revisión de docs/bitacora/lab6-guardia.md
+- **Dónde lo usé (parte, script o pregunta):** Todo el laboratorio, esta declaración, la revisión de docs/bitacora/lab6-guardia.md y la revisión de docs/bitacora/lab6-respuestas.md
 - **Propósito (para qué lo necesitaba):** que me guiara en el laboratorio, me dijera si tenía fallos y me explicara cómo corregirlos
-- **Qué hace (con mis palabras; línea a línea si es SQL corto):** he ido pasándole los comandos que ejecutaba y sus salidas, y me decía si había algún fallo y cómo corregirlo. También me explicó qué poner en config/.env (las contraseñas de las dos cuentas nuevas y mi código de alumno), cómo guardar en nano, y me dio el texto de esta declaración, que he revisado. En la guardia me explicó cómo leer el diagnóstico y revisó mis postmortems, que escribí y corregí yo.
+- **Qué hace (con mis palabras; línea a línea si es SQL corto):** he ido pasándole los comandos que ejecutaba y sus salidas, y me decía si había algún fallo y cómo corregirlo. También me explicó qué poner en config/.env (las contraseñas de las dos cuentas nuevas y mi código de alumno), cómo guardar en nano, y me dio el texto de esta declaración, que he revisado. En la guardia me explicó cómo leer el diagnóstico y revisó mis postmortems, que escribí y corregí yo. Para las respuestas me indicó en qué evidencia estaba cada dato y revisó mis respuestas y el simulacro; las escribí y corregí yo.
 - **Evidencia de ejecución (archivo de docs/bitacora/lab6/evidencia con mi cabecera):** no aplica
 
 ## Entrada 2
